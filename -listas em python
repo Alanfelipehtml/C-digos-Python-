@@ -1,0 +1,25 @@
+produtos =["Teclados" , "Mouse" , "Notebook"]
+print("ESTOQUE FÁCIL")
+print("1 - lista de Produtos")
+opcao = input("Escolha uma opção: ")
+if opcao == "1":
+    print("\n==== Produtos Cadastrados")
+    for produto in produtos: 
+        print(produto)
+while True:
+    escolha_item = input("\nDigite um produto (ou 'sair'): ")
+
+    if escolha_item.lower() == "sair":
+        print("Encerrando...")
+        break
+
+    if escolha_item.title() in produtos:
+        print("Temos este produto")
+    else:
+        print("Não temos este produto")
+
+        print("Lista Original", produtos)
+
+        produtos[1] = "Mouse sem fio"
+
+        print("Lista atualizada:", produtos)
